@@ -1,0 +1,1710 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minorities in STEM | Rooted in Diversity</title>
+    <meta
+      name="description"
+      content="Minorities in STEM is a student-founded nonprofit bridging the gap between underrepresented minorities and STEM, one chapter at a time."
+    >
+    <link rel="icon" href="/assets/images/favicon.png?v=2" type="image/png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=2">
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    <style>
+      :root,
+      [data-theme="light"] {
+        --color-bg: #f5f4ef;
+        --color-surface: #f8f7f3;
+        --color-surface-2: #fafaf7;
+        --color-surface-offset: #eeecea;
+        --color-divider: #dddbd6;
+        --color-border: #d2cfc8;
+        --color-text: #1e1c17;
+        --color-text-muted: #726f66;
+        --color-text-faint: #b8b6b0;
+        --color-text-inverse: #f5f4ef;
+        --color-on-primary: #f5f4ef;
+        --color-on-accent: #1e1c17;
+        --color-on-dark: #f5f4ef;
+        --color-on-dark-muted: #b8b6b0;
+        --color-primary: oklch(0.38 0.12 158);
+        --color-primary-hover: oklch(0.30 0.12 158);
+        --color-primary-active: oklch(0.24 0.11 158);
+        --color-primary-highlight: oklch(0.92 0.04 158);
+        --color-primary-band: oklch(0.22 0.10 158);
+        --color-accent: oklch(0.65 0.14 68);
+        --color-accent-hover: oklch(0.56 0.14 68);
+        --color-footer: #0e0d0b;
+        --radius-sm: 0.375rem;
+        --radius-md: 0.5rem;
+        --radius-lg: 0.75rem;
+        --radius-xl: 1.25rem;
+        --radius-full: 9999px;
+        --shadow-sm: 0 1px 2px oklch(0.2 0.02 80 / 0.06);
+        --shadow-md: 0 4px 16px oklch(0.2 0.02 80 / 0.09);
+        --shadow-lg: 0 16px 40px oklch(0.2 0.02 80 / 0.13);
+        --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+        --font-display: "Boska", "Georgia", serif;
+        --font-body: "Satoshi", "Inter", sans-serif;
+        --content-narrow: 640px;
+        --content-default: 960px;
+        --content-wide: 1200px;
+        --text-xs: clamp(0.75rem, 0.72rem + 0.13vw, 0.82rem);
+        --text-sm: clamp(0.875rem, 0.84rem + 0.16vw, 0.95rem);
+        --text-base: clamp(1rem, 0.97rem + 0.18vw, 1.075rem);
+        --text-md: clamp(1.125rem, 1.04rem + 0.36vw, 1.3rem);
+        --text-lg: clamp(1.25rem, 1.1rem + 0.58vw, 1.55rem);
+        --text-xl: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+        --text-2xl: clamp(2rem, 1.55rem + 1.85vw, 3rem);
+        --text-3xl: clamp(2.4rem, 1.72rem + 2.8vw, 4.2rem);
+        --text-hero: clamp(3.25rem, 2rem + 5.4vw, 7.4rem);
+        --space-1: 0.25rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-7: 1.75rem;
+        --space-8: 2rem;
+        --space-10: 2.5rem;
+        --space-12: 3rem;
+        --space-14: 3.5rem;
+        --space-16: 4rem;
+        --space-20: 5rem;
+        --space-24: 6rem;
+        --space-28: 7rem;
+        --space-32: 8rem;
+      }
+
+      [data-theme="dark"] {
+        --color-bg: #131310;
+        --color-surface: #191814;
+        --color-surface-2: #1e1d19;
+        --color-surface-offset: #232219;
+        --color-divider: #2c2b26;
+        --color-border: #38362f;
+        --color-text: #e8e6df;
+        --color-text-muted: #8a8880;
+        --color-text-faint: #55534c;
+        --color-text-inverse: #1e1c17;
+        --color-on-primary: #1e1c17;
+        --color-on-accent: #1e1c17;
+        --color-on-dark: #e8e6df;
+        --color-on-dark-muted: #aaa69b;
+        --color-primary: oklch(0.65 0.12 158);
+        --color-primary-hover: oklch(0.72 0.12 158);
+        --color-primary-active: oklch(0.78 0.11 158);
+        --color-primary-highlight: oklch(0.22 0.06 158);
+        --color-primary-band: oklch(0.18 0.08 158);
+        --color-accent: oklch(0.72 0.14 68);
+        --color-accent-hover: oklch(0.78 0.14 68);
+        --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.25);
+        --shadow-md: 0 4px 16px oklch(0 0 0 / 0.35);
+        --shadow-lg: 0 16px 40px oklch(0 0 0 / 0.45);
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        min-width: 320px;
+        margin: 0;
+        color: var(--color-text);
+        font-family: var(--font-body);
+        font-size: var(--text-base);
+        line-height: 1.65;
+        background: var(--color-bg);
+      }
+
+      body.is-locked {
+        overflow: hidden;
+      }
+
+      ::selection {
+        color: var(--color-on-primary);
+        background: var(--color-primary);
+      }
+
+      a {
+        color: inherit;
+        text-decoration-thickness: 0.08em;
+        text-underline-offset: 0.18em;
+      }
+
+      button,
+      input,
+      textarea {
+        font: inherit;
+      }
+
+      button {
+        border: 0;
+      }
+
+      svg {
+        display: block;
+        max-width: 100%;
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--color-accent);
+        outline-offset: 4px;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        white-space: nowrap;
+        border: 0;
+        clip: rect(0, 0, 0, 0);
+      }
+
+      .sr-only.focus\:not-sr-only:focus {
+        position: fixed;
+        z-index: 1000;
+        top: var(--space-4);
+        left: var(--space-4);
+        width: auto;
+        height: auto;
+        padding: var(--space-3) var(--space-4);
+        overflow: visible;
+        color: var(--color-on-primary);
+        background: var(--color-primary);
+        border-radius: var(--radius-md);
+        clip: auto;
+      }
+
+      .site-header {
+        position: fixed;
+        z-index: 100;
+        inset: 0 0 auto;
+        height: 56px;
+        color: var(--color-text);
+        background: oklch(from var(--color-bg) l c h / 0.78);
+        border-bottom: 1px solid transparent;
+        backdrop-filter: blur(16px);
+        transition:
+          background var(--transition-interactive),
+          border-color var(--transition-interactive),
+          box-shadow var(--transition-interactive);
+      }
+
+      .site-header.is-scrolled {
+        background: oklch(from var(--color-bg) l c h / 0.92);
+        border-color: var(--color-divider);
+        box-shadow: var(--shadow-sm);
+      }
+
+      .nav-wrap {
+        display: flex;
+        width: min(var(--content-wide), calc(100% - (var(--space-5) * 2)));
+        height: 100%;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+        margin-inline: auto;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+        color: var(--color-primary);
+        font-family: var(--font-display);
+        font-size: var(--text-sm);
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        text-decoration: none;
+      }
+
+      .brand-mark {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+        border-radius: var(--radius-sm);
+      }
+
+      .brand span {
+        color: var(--color-text);
+      }
+
+      .desktop-nav {
+        display: none;
+        align-items: center;
+        gap: var(--space-6);
+      }
+
+      .desktop-nav a,
+      .mobile-nav a {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+        font-weight: 700;
+        text-decoration: none;
+        transition:
+          color var(--transition-interactive),
+          transform var(--transition-interactive);
+      }
+
+      .desktop-nav a:hover,
+      .mobile-nav a:hover {
+        color: var(--color-primary);
+      }
+
+      .nav-actions {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-2);
+      }
+
+      .icon-button,
+      .menu-button {
+        display: inline-grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        color: var(--color-text);
+        background: transparent;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-full);
+        cursor: pointer;
+        transition:
+          color var(--transition-interactive),
+          border-color var(--transition-interactive),
+          transform var(--transition-interactive);
+      }
+
+      .icon-button:hover,
+      .menu-button:hover {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+        transform: translateY(-1px);
+      }
+
+      .menu-lines,
+      .menu-lines::before,
+      .menu-lines::after {
+        display: block;
+        width: 18px;
+        height: 2px;
+        background: currentColor;
+        border-radius: var(--radius-full);
+        content: "";
+        transition:
+          transform var(--transition-interactive),
+          opacity var(--transition-interactive);
+      }
+
+      .menu-lines::before {
+        transform: translateY(-6px);
+      }
+
+      .menu-lines::after {
+        transform: translateY(4px);
+      }
+
+      .menu-button[aria-expanded="true"] .menu-lines {
+        transform: rotate(45deg);
+      }
+
+      .menu-button[aria-expanded="true"] .menu-lines::before {
+        opacity: 0;
+      }
+
+      .menu-button[aria-expanded="true"] .menu-lines::after {
+        transform: translateY(-2px) rotate(-90deg);
+      }
+
+      .button {
+        display: inline-flex;
+        min-height: 46px;
+        align-items: center;
+        justify-content: center;
+        gap: var(--space-2);
+        padding: var(--space-3) var(--space-5);
+        color: var(--color-on-primary);
+        font-size: var(--text-sm);
+        font-weight: 800;
+        line-height: 1;
+        text-align: center;
+        text-decoration: none;
+        background: var(--color-primary);
+        border: 1px solid var(--color-primary);
+        border-radius: var(--radius-full);
+        box-shadow: var(--shadow-sm);
+        cursor: pointer;
+        transition:
+          transform var(--transition-interactive),
+          box-shadow var(--transition-interactive),
+          background var(--transition-interactive),
+          border-color var(--transition-interactive),
+          color var(--transition-interactive);
+      }
+
+      .button:hover {
+        color: var(--color-on-primary);
+        background: var(--color-primary-hover);
+        border-color: var(--color-primary-hover);
+        box-shadow: var(--shadow-md);
+        transform: scale(1.02);
+      }
+
+      .button:active {
+        background: var(--color-primary-active);
+        border-color: var(--color-primary-active);
+      }
+
+      .button-accent {
+        color: var(--color-on-accent);
+        background: var(--color-accent);
+        border-color: var(--color-accent);
+      }
+
+      .button-accent:hover {
+        background: var(--color-accent-hover);
+        border-color: var(--color-accent-hover);
+      }
+
+      .button-ghost {
+        color: var(--color-text);
+        background: transparent;
+        border-color: var(--color-border);
+        box-shadow: none;
+      }
+
+      .button-ghost:hover {
+        color: var(--color-primary);
+        background: var(--color-surface);
+        border-color: var(--color-primary);
+      }
+
+      .button-light {
+        color: var(--color-primary-active);
+        background: var(--color-surface-2);
+        border-color: var(--color-surface-2);
+      }
+
+      .button-light:hover {
+        color: var(--color-primary-active);
+        background: var(--color-bg);
+        border-color: var(--color-bg);
+      }
+
+      .button-light-outline {
+        color: var(--color-on-accent);
+        background: transparent;
+        border-color: var(--color-on-accent);
+      }
+
+      .button-light-outline:hover {
+        color: var(--color-on-primary);
+        background: var(--color-primary);
+        border-color: var(--color-primary);
+      }
+
+      .join-button {
+        display: none;
+      }
+
+      .mobile-panel {
+        position: fixed;
+        z-index: 90;
+        inset: 0 0 0 auto;
+        display: grid;
+        width: min(86vw, 390px);
+        padding: calc(56px + var(--space-8)) var(--space-6) var(--space-8);
+        background: var(--color-surface);
+        border-left: 1px solid var(--color-border);
+        box-shadow: var(--shadow-lg);
+        transform: translateX(102%);
+        transition: transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .mobile-panel.is-open {
+        transform: translateX(0);
+      }
+
+      .mobile-backdrop {
+        position: fixed;
+        z-index: 80;
+        inset: 0;
+        background: oklch(from var(--color-text) l c h / 0.24);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity var(--transition-interactive);
+      }
+
+      .mobile-backdrop.is-open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .mobile-nav {
+        display: grid;
+        align-content: start;
+        gap: var(--space-5);
+      }
+
+      .mobile-nav a {
+        font-size: var(--text-lg);
+        color: var(--color-text);
+      }
+
+      main {
+        overflow: clip;
+      }
+
+      .section {
+        position: relative;
+        padding-block: clamp(var(--space-20), 10vw, var(--space-32));
+      }
+
+      .section-inner {
+        width: min(var(--content-wide), calc(100% - (var(--space-5) * 2)));
+        margin-inline: auto;
+      }
+
+      .section-narrow {
+        width: min(var(--content-narrow), calc(100% - (var(--space-5) * 2)));
+        margin-inline: auto;
+      }
+
+      .eyebrow {
+        margin: 0 0 var(--space-3);
+        color: var(--color-primary);
+        font-size: var(--text-xs);
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        overflow-wrap: anywhere;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        color: var(--color-text);
+        line-height: 0.98;
+      }
+
+      h1,
+      h2 {
+        font-family: var(--font-display);
+        font-weight: 700;
+      }
+
+      h1 {
+        font-size: var(--text-hero);
+        letter-spacing: -0.01em;
+      }
+
+      h2 {
+        font-size: var(--text-3xl);
+      }
+
+      h3 {
+        font-family: var(--font-body);
+        font-size: var(--text-xl);
+        font-weight: 800;
+        line-height: 1.1;
+      }
+
+      p {
+        margin: 0;
+        color: var(--color-text-muted);
+      }
+
+      .lead {
+        font-size: var(--text-lg);
+        line-height: 1.55;
+      }
+
+      .hero {
+        display: grid;
+        min-height: 100dvh;
+        align-items: center;
+        padding-block: calc(56px + var(--space-16)) var(--space-16);
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: var(--space-12);
+        align-items: center;
+      }
+
+      .hero-copy {
+        display: grid;
+        gap: var(--space-6);
+      }
+
+      .badge {
+        display: inline-flex;
+        width: fit-content;
+        align-items: center;
+        gap: var(--space-2);
+        padding: var(--space-2) var(--space-4);
+        color: var(--color-text);
+        font-size: var(--text-xs);
+        font-weight: 900;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        background: oklch(from var(--color-accent) l c h / 0.18);
+        border: 1px solid oklch(from var(--color-accent) l c h / 0.38);
+        border-radius: var(--radius-full);
+      }
+
+      .badge-dot {
+        width: 0.55rem;
+        height: 0.55rem;
+        background: var(--color-accent);
+        border-radius: var(--radius-full);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+      }
+
+      .hero-stats {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-6);
+        padding-top: var(--space-3);
+      }
+
+      .hero-stat {
+        display: grid;
+        min-width: 120px;
+        gap: var(--space-1);
+      }
+
+      .hero-stat strong {
+        color: var(--color-primary);
+        font-family: var(--font-display);
+        font-size: var(--text-2xl);
+        line-height: 1;
+      }
+
+      .hero-stat span {
+        color: var(--color-text-muted);
+        font-size: var(--text-sm);
+        font-weight: 700;
+      }
+
+      .hero-art {
+        width: min(86vw, 560px);
+        margin-inline: auto;
+        color: var(--color-primary);
+      }
+
+      .draw-path {
+        stroke-dasharray: 900;
+        stroke-dashoffset: 900;
+        animation: draw-line 2.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      .draw-path:nth-of-type(2) {
+        animation-delay: 220ms;
+      }
+
+      .draw-path:nth-of-type(3) {
+        animation-delay: 440ms;
+      }
+
+      @keyframes draw-line {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .mission {
+        color: var(--color-on-primary);
+        background: var(--color-primary);
+      }
+
+      .mission h2,
+      .mission p,
+      .mission .eyebrow {
+        color: var(--color-on-primary);
+      }
+
+      .mission .eyebrow {
+        opacity: 0.78;
+      }
+
+      .mission-quote {
+        margin-inline: auto;
+        font-size: var(--text-2xl);
+        text-align: center;
+      }
+
+      .mission-body {
+        display: grid;
+        gap: var(--space-6);
+        max-width: var(--content-default);
+        margin: var(--space-10) auto 0;
+      }
+
+      .mission-body p {
+        color: oklch(from var(--color-on-primary) l c h / 0.84);
+      }
+
+      .wave {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: clamp(44px, 7vw, 86px);
+        color: var(--color-bg);
+        pointer-events: none;
+      }
+
+      .wave-top {
+        top: -1px;
+      }
+
+      .wave-bottom {
+        bottom: -1px;
+        transform: rotate(180deg);
+      }
+
+      .section-heading {
+        display: grid;
+        max-width: 760px;
+        gap: var(--space-3);
+        margin-bottom: var(--space-10);
+      }
+
+      .pillars-layout {
+        display: grid;
+        gap: var(--space-5);
+      }
+
+      .pillar-stack {
+        display: grid;
+        gap: var(--space-5);
+      }
+
+      .feature-card {
+        position: relative;
+        display: grid;
+        min-height: 100%;
+        gap: var(--space-6);
+        padding: clamp(var(--space-6), 4vw, var(--space-10));
+        overflow: hidden;
+        background: var(--color-surface);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-md);
+        transition:
+          transform var(--transition-interactive),
+          box-shadow var(--transition-interactive);
+      }
+
+      .feature-card:hover {
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-4px);
+      }
+
+      .feature-card-large {
+        min-height: 420px;
+      }
+
+      .pattern-card::before {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(60deg, transparent 24%, oklch(from var(--color-primary) l c h / 0.09) 25%, transparent 26%),
+          linear-gradient(120deg, transparent 24%, oklch(from var(--color-primary) l c h / 0.07) 25%, transparent 26%);
+        background-size: 56px 56px;
+        content: "";
+        opacity: 0.7;
+        pointer-events: none;
+      }
+
+      .feature-card > * {
+        position: relative;
+      }
+
+      .feature-icon {
+        width: 42px;
+        height: 42px;
+        color: var(--color-primary);
+      }
+
+      .feature-link {
+        width: fit-content;
+        color: var(--color-primary);
+        font-weight: 900;
+        text-decoration: none;
+      }
+
+      .feature-link:hover {
+        color: var(--color-primary-hover);
+      }
+
+      .stats-band {
+        color: var(--color-on-dark);
+        background: var(--color-primary-band);
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-6);
+      }
+
+      .band-stat {
+        display: grid;
+        gap: var(--space-2);
+        min-height: 120px;
+        align-content: center;
+      }
+
+      .band-stat strong {
+        color: var(--color-on-dark);
+        font-family: var(--font-display);
+        font-size: var(--text-2xl);
+        line-height: 1;
+      }
+
+      .band-stat span {
+        color: var(--color-on-dark-muted);
+        font-size: var(--text-sm);
+        font-weight: 700;
+      }
+
+      .community {
+        background: var(--color-surface-offset);
+      }
+
+      .community-grid {
+        display: grid;
+        gap: var(--space-10);
+        align-items: center;
+      }
+
+      .community-art-card {
+        display: grid;
+        aspect-ratio: 1 / 1.08;
+        place-items: center;
+        padding: var(--space-8);
+        color: var(--color-primary);
+        background: var(--color-surface);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-md);
+      }
+
+      .community-copy {
+        display: grid;
+        gap: var(--space-5);
+      }
+
+      .check-list {
+        display: grid;
+        gap: var(--space-3);
+        padding: 0;
+        margin: var(--space-2) 0 0;
+        list-style: none;
+      }
+
+      .check-list li {
+        display: grid;
+        grid-template-columns: 24px 1fr;
+        gap: var(--space-3);
+        align-items: start;
+        color: var(--color-text);
+        font-weight: 700;
+      }
+
+      .check-icon {
+        width: 22px;
+        height: 22px;
+        color: var(--color-primary);
+      }
+
+      .chapter-cta {
+        color: var(--color-on-accent);
+        background:
+          linear-gradient(oklch(from var(--color-accent) l c h / 0.94), oklch(from var(--color-accent) l c h / 0.94)),
+          var(--color-accent);
+      }
+
+      .chapter-cta::before {
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg width='96' height='84' viewBox='0 0 96 84' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 1 47 14v27L24 54 1 41V14L24 1Zm48 28 23 13v27L72 82 49 69V42l23-13Z' fill='none' stroke='currentColor' stroke-width='1'/%3E%3C/svg%3E");
+        color: var(--color-on-accent);
+        opacity: 0.16;
+        content: "";
+        pointer-events: none;
+      }
+
+      .chapter-content {
+        position: relative;
+        display: grid;
+        max-width: 760px;
+        gap: var(--space-5);
+        justify-items: center;
+        text-align: center;
+      }
+
+      .chapter-content h2,
+      .chapter-content p {
+        color: var(--color-on-accent);
+      }
+
+      .chapter-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-3);
+        margin-top: var(--space-2);
+      }
+
+      .small-print {
+        color: oklch(from var(--color-on-accent) l c h / 0.78);
+        font-size: var(--text-sm);
+        font-weight: 800;
+      }
+
+      .team-grid {
+        display: grid;
+        grid-auto-columns: minmax(230px, 74vw);
+        grid-auto-flow: column;
+        gap: var(--space-6);
+        padding-bottom: var(--space-4);
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+      }
+
+      .team-card {
+        display: grid;
+        gap: var(--space-4);
+        justify-items: start;
+        scroll-snap-align: start;
+      }
+
+      .avatar {
+        width: 128px;
+        height: 128px;
+        color: var(--color-primary);
+      }
+
+      .avatar-photo-link {
+        display: block;
+        width: 128px;
+        height: 128px;
+        overflow: hidden;
+        border-radius: var(--radius-full);
+        box-shadow: var(--shadow-md);
+      }
+
+      .avatar-photo {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .team-link {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .team-link:hover {
+        color: var(--color-primary);
+      }
+
+      .team-card h3 {
+        font-size: var(--text-md);
+      }
+
+      .team-card p {
+        font-size: var(--text-sm);
+        font-weight: 700;
+      }
+
+      .site-footer {
+        color: var(--color-on-dark-muted);
+        background: var(--color-footer);
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: var(--space-8);
+        padding-block: var(--space-20) var(--space-8);
+      }
+
+      .footer-brand {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .footer-brand .brand {
+        color: var(--color-on-dark);
+      }
+
+      .footer-title {
+        margin: 0 0 var(--space-4);
+        color: var(--color-on-dark);
+        font-size: var(--text-sm);
+        font-weight: 900;
+      }
+
+      .footer-links,
+      .social-list {
+        display: grid;
+        gap: var(--space-3);
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-links a,
+      .social-list a {
+        color: var(--color-on-dark);
+        font-size: var(--text-sm);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .footer-links a:hover,
+      .social-list a:hover {
+        color: var(--color-accent);
+      }
+
+      .social-list a {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-3);
+      }
+
+      .social-list svg {
+        width: 24px;
+        height: 24px;
+      }
+
+      .footer-bottom {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: var(--space-3);
+        padding-block: var(--space-6);
+        border-top: 1px solid oklch(from var(--color-on-dark) l c h / 0.12);
+      }
+
+      .footer-bottom p {
+        color: var(--color-on-dark-muted);
+        font-size: var(--text-sm);
+      }
+
+      [data-reveal] {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+
+      @media (min-width: 768px) {
+        .site-header {
+          height: 64px;
+        }
+
+        .hero {
+          padding-block: calc(64px + var(--space-12)) var(--space-12);
+        }
+
+        .hero-grid {
+          grid-template-columns: minmax(0, 1.08fr) minmax(320px, 0.92fr);
+        }
+
+        .mission-body {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .community-grid {
+          grid-template-columns: minmax(280px, 0.88fr) minmax(0, 1.12fr);
+        }
+
+        .footer-grid {
+          grid-template-columns: 1.4fr 0.7fr 0.7fr 1fr;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .desktop-nav {
+          display: inline-flex;
+        }
+
+        .menu-button {
+          display: none;
+        }
+
+        .join-button {
+          display: inline-flex;
+        }
+
+        .mobile-panel,
+        .mobile-backdrop {
+          display: none;
+        }
+
+        .pillars-layout {
+          grid-template-columns: minmax(0, 3fr) minmax(320px, 2fr);
+        }
+
+        .stats-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 0;
+        }
+
+        .band-stat {
+          padding-inline: var(--space-8);
+          border-left: 1px solid oklch(from var(--color-on-dark) l c h / 0.18);
+        }
+
+        .band-stat:first-child {
+          border-left: 0;
+        }
+
+        .team-grid {
+          grid-auto-flow: initial;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          overflow: visible;
+        }
+      }
+
+      @media (max-width: 374px) {
+        .hero-art {
+          display: none;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .hero-art {
+          width: 60vw;
+          min-width: 220px;
+        }
+
+        .hero-actions .button,
+        .chapter-buttons .button {
+          width: 100%;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 1ms !important;
+        }
+
+        [data-reveal] {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main" class="sr-only focus:not-sr-only">Skip to content</a>
+
+    <header class="site-header" data-site-header>
+      <div class="nav-wrap">
+        <a class="brand" href="#top" aria-label="Minorities In Stem home">
+          <img class="brand-mark" src="/assets/images/logo.png" alt="" aria-hidden="true">
+          <span>Minorities In Stem</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Primary navigation">
+          <a href="#about">About</a>
+          <a href="#mission">Mission</a>
+          <a href="#community">Community</a>
+          <a href="#chapter">Start a Chapter</a>
+          <a href="#team">Our Team</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="icon-button" type="button" aria-label="Switch theme" data-theme-toggle></button>
+          <a class="button button-accent join-button" href="#chapter">Join Us</a>
+          <button class="menu-button" type="button" aria-label="Open menu" aria-controls="mobile-panel" aria-expanded="false" data-menu-toggle>
+            <span class="menu-lines" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-backdrop" data-mobile-backdrop></div>
+    <aside class="mobile-panel" id="mobile-panel" aria-label="Mobile navigation" data-mobile-panel>
+      <nav class="mobile-nav">
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#community">Community</a>
+        <a href="#chapter">Start a Chapter</a>
+        <a href="#team">Our Team</a>
+        <a class="button button-accent" href="#chapter">Join Us</a>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="section-inner hero-grid">
+          <div class="hero-copy">
+            <div class="badge" data-reveal>
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span>Founded at Woodward Academy · 2024</span>
+            </div>
+            <h1 id="hero-title" data-reveal>Rooted in Diversity,<br>Growing Through STEM.</h1>
+            <p class="lead" data-reveal>We're building a future where every voice in STEM is heard, valued, and empowered.</p>
+            <div class="hero-actions" data-reveal>
+              <a class="button" href="#chapter">Get Involved</a>
+              <a class="button button-ghost" href="#mission">Learn More</a>
+            </div>
+            <div class="hero-stats" aria-label="Organization impact statistics" data-hero-stats data-reveal>
+              <div class="hero-stat">
+                <strong aria-live="polite"><span data-count-to="10" data-suffix="+">0</span></strong>
+                <span>Chapters Nationwide</span>
+              </div>
+              <div class="hero-stat">
+                <strong aria-live="polite"><span data-count-to="100" data-suffix="+">0</span></strong>
+                <span>Volunteers</span>
+              </div>
+              <div class="hero-stat">
+                <strong aria-live="polite"><span data-count-to="80" data-suffix="k+">0</span></strong>
+                <span>Impacted</span>
+              </div>
+            </div>
+          </div>
+
+          <svg class="hero-art" viewBox="0 0 520 520" role="img" aria-labelledby="hero-art-title">
+            <title id="hero-art-title">Abstract botanical and scientific illustration</title>
+            <defs>
+              <pattern id="hexGrid" width="46" height="40" patternUnits="userSpaceOnUse">
+                <path d="M23 1 45 13v26L23 51 1 39V13L23 1Z" fill="none" stroke="currentColor" stroke-opacity="0.13" stroke-width="1.3" />
+              </pattern>
+            </defs>
+            <rect x="22" y="22" width="476" height="476" rx="46" fill="var(--color-primary-highlight)" />
+            <rect x="42" y="42" width="436" height="436" rx="34" fill="url(#hexGrid)" />
+            <path
+              class="draw-path"
+              d="M136 386C245 336 318 239 355 104"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="10"
+            />
+            <path
+              class="draw-path"
+              d="M166 338c57 13 103-3 139-48M206 269c48 10 86-5 114-44M246 199c37 8 68-3 94-32"
+              fill="none"
+              stroke="var(--color-primary-hover)"
+              stroke-linecap="round"
+              stroke-width="7"
+            />
+            <path
+              class="draw-path"
+              d="M130 148c66 20 132 20 198 0s119-20 159 0M130 214c66-20 132-20 198 0s119 20 159 0M130 280c66 20 132 20 198 0s119-20 159 0"
+              fill="none"
+              stroke="var(--color-accent)"
+              stroke-linecap="round"
+              stroke-opacity="0.86"
+              stroke-width="4"
+            />
+            <path d="M139 371c52-9 97 14 135 69-55 18-105-2-150-61 5-3 10-6 15-8Z" fill="currentColor" fill-opacity="0.9" />
+            <path d="M318 128c44 31 61 77 52 138-57-18-86-60-86-126 11-5 22-9 34-12Z" fill="var(--color-primary-hover)" fill-opacity="0.72" />
+            <path d="M92 266c29-38 68-53 118-45-16 48-52 76-110 83-3-12-6-25-8-38Z" fill="var(--color-primary)" fill-opacity="0.48" />
+            <circle cx="130" cy="148" r="8" fill="var(--color-accent)" />
+            <circle cx="328" cy="148" r="8" fill="var(--color-accent)" />
+            <circle cx="487" cy="148" r="8" fill="var(--color-accent)" />
+            <circle cx="130" cy="214" r="8" fill="var(--color-accent)" />
+            <circle cx="328" cy="214" r="8" fill="var(--color-accent)" />
+            <circle cx="487" cy="214" r="8" fill="var(--color-accent)" />
+            <circle cx="130" cy="280" r="8" fill="var(--color-accent)" />
+            <circle cx="328" cy="280" r="8" fill="var(--color-accent)" />
+            <circle cx="487" cy="280" r="8" fill="var(--color-accent)" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section mission" id="mission" aria-labelledby="mission-title">
+        <svg class="wave wave-top" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 0h1440v52c-150 42-292 45-426 10C802 7 647 2 548 42 388 106 208 102 0 48V0Z" fill="currentColor" />
+        </svg>
+        <div class="section-inner">
+          <div class="section-narrow" data-reveal>
+            <p class="eyebrow">Our Mission</p>
+            <h2 id="mission-title" class="mission-quote">An Initiative to Bridge the Gap in STEM</h2>
+          </div>
+          <div class="mission-body">
+            <p data-reveal>Minorities in STEM was founded in 2024 at Woodward Academy to bridge the gap between minorities and STEM. Acknowledging many initiatives to become more diverse and inclusive in the fields of robotics and technology, it became its primary focus and vision for STEM to become more inclusive to everyone in our community of STEM.</p>
+            <p data-reveal>We support initiatives such as facilitating conversation within our community, bringing in guest speakers, and getting input from people in countless fields and backgrounds. Our goal is to raise awareness of the immense potential these students possess and help them see and believe in their own capabilities.</p>
+          </div>
+        </div>
+        <svg class="wave wave-bottom" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 0h1440v52c-150 42-292 45-426 10C802 7 647 2 548 42 388 106 208 102 0 48V0Z" fill="currentColor" />
+        </svg>
+      </section>
+
+      <section class="section" id="about" aria-labelledby="pillars-title">
+        <div class="section-inner">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">What We Do</p>
+            <h2 id="pillars-title">Action that feels local and grows nationally.</h2>
+          </div>
+
+          <div class="pillars-layout">
+            <article class="feature-card feature-card-large pattern-card" data-reveal>
+              <svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M6 36c12-3 20-12 24-27 9 10 10 22 2 31-7 8-18 9-26-4Z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                <path d="M14 35c8-4 14-10 18-18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="3" />
+              </svg>
+              <div>
+                <h3>Bridging the Gap</h3>
+                <p>We make STEM feel reachable by connecting students with role models, resources, and practical experiences before opportunity starts to feel reserved for someone else. Our work is built around early access, consistent encouragement, and visible pathways.</p>
+              </div>
+              <a class="feature-link" href="#mission">→ Learn more</a>
+            </article>
+
+            <div class="pillar-stack">
+              <article class="feature-card" data-reveal>
+                <svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M16 24a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM34 27a7 7 0 1 0 0-14 7 7 0 0 0 0 14ZM4 42c1.8-8 6-12 12-12s10.2 4 12 12M26 42c1.2-5.5 4-8.2 8-8.2S40.8 36.5 42 42" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                </svg>
+                <div>
+                  <h3>Building Community</h3>
+                  <p>Students go further when they are not isolated. We create peer networks where questions, ambition, and identity can coexist without apology.</p>
+                </div>
+                <a class="feature-link" href="#community">→ Learn more</a>
+              </article>
+
+              <article class="feature-card" data-reveal>
+                <svg class="feature-icon" viewBox="0 0 48 48" aria-hidden="true">
+                  <path d="M8 40V16l16-8 16 8v24M16 40V22h16v18M8 40h32M20 28h8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" />
+                </svg>
+                <div>
+                  <h3>Starting Chapters</h3>
+                  <p>Chapter leaders bring the mission home with programming that fits their school and community. We provide structure without flattening local voice.</p>
+                </div>
+                <a class="feature-link" href="#chapter">→ Learn more</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats-band" aria-labelledby="stats-title">
+        <div class="section-inner">
+          <h2 id="stats-title" class="sr-only">Organization Snapshot</h2>
+          <div class="stats-grid">
+            <div class="band-stat" data-reveal>
+              <strong>2024</strong>
+              <span>Year Founded</span>
+            </div>
+            <div class="band-stat" data-reveal>
+              <strong>Woodward Academy</strong>
+              <span>Origin</span>
+            </div>
+            <div class="band-stat" data-reveal>
+              <strong>National</strong>
+              <span>Chapter Reach</span>
+            </div>
+            <div class="band-stat" data-reveal>
+              <strong>501(c)(3)</strong>
+              <span>Organization Type</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section community" id="community" aria-labelledby="community-title">
+        <div class="section-inner community-grid">
+          <div class="community-art-card" data-reveal>
+            <svg viewBox="0 0 420 460" role="img" aria-label="Decorative botanical molecular grid">
+              <defs>
+                <pattern id="smallHex" width="36" height="32" patternUnits="userSpaceOnUse">
+                  <path d="M18 1 35 10.5v19L18 39 1 29.5v-19L18 1Z" fill="none" stroke="currentColor" stroke-opacity="0.16" />
+                </pattern>
+              </defs>
+              <rect width="420" height="460" rx="34" fill="var(--color-primary-highlight)" />
+              <rect x="22" y="22" width="376" height="416" rx="26" fill="url(#smallHex)" />
+              <path d="M204 392c-5-113 15-206 60-279" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="10" />
+              <path d="M170 332c-55-13-91-49-108-108 65-6 114 25 145 93-12 6-24 11-37 15Z" fill="currentColor" fill-opacity="0.34" />
+              <path d="M246 257c58-19 100-58 126-117-72-10-124 20-157 88 9 12 19 22 31 29Z" fill="currentColor" fill-opacity="0.5" />
+              <path d="M192 183c-48-18-78-54-90-108 61 1 101 33 120 95-9 6-19 10-30 13Z" fill="currentColor" fill-opacity="0.28" />
+              <circle cx="126" cy="116" r="8" fill="var(--color-accent)" />
+              <circle cx="265" cy="113" r="8" fill="var(--color-accent)" />
+              <circle cx="352" cy="171" r="8" fill="var(--color-accent)" />
+              <path d="M126 116h139l87 55" fill="none" stroke="var(--color-accent)" stroke-linecap="round" stroke-opacity="0.7" stroke-width="3" />
+            </svg>
+          </div>
+
+          <div class="community-copy">
+            <p class="eyebrow" data-reveal>Community</p>
+            <h2 id="community-title" data-reveal>Join a Community That Grows With You</h2>
+            <p data-reveal>Creating a community of students in STEM to help each other go beyond the horizon. Whether you're just curious or already deep in research, you belong here.</p>
+            <p data-reveal>We pair student energy with clear systems: chapters, events, mentorship, and shared resources that make it easier to start and harder to stop.</p>
+            <ul class="check-list" data-reveal>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" /></svg>
+                Peer support from students navigating similar STEM paths
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" /></svg>
+                Chapter programming that can adapt to local needs
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" /></svg>
+                Early exposure to STEM fields, projects, and mentors
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m4 12 5 5L20 6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" /></svg>
+                A grounded place to ask questions and build confidence
+              </li>
+            </ul>
+            <a class="button" href="#chapter" data-reveal>Find Your Place</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section chapter-cta" id="chapter" aria-labelledby="chapter-title">
+        <div class="section-inner chapter-content">
+          <h2 id="chapter-title" data-reveal>Start a Chapter at Your School</h2>
+          <p class="lead" data-reveal>We make STEM accessible for students at a young age. Become a chapter leader and bring this mission to your community.</p>
+          <div class="chapter-buttons" data-reveal>
+            <a class="button button-light" href="mailto:hello@minoritiesinstem.org?subject=Chapter%20Application">Apply Now</a>
+            <a class="button button-light-outline" href="#about">Learn How It Works</a>
+          </div>
+          <p class="small-print" data-reveal>We make STEM accessible for students at a young age</p>
+        </div>
+      </section>
+
+      <section class="section" id="team" aria-labelledby="team-title">
+        <div class="section-inner">
+          <div class="section-heading" data-reveal>
+            <p class="eyebrow">Our Team</p>
+            <h2 id="team-title">Meet the Team</h2>
+          </div>
+          <div class="team-grid">
+            <article class="team-card" data-reveal>
+              <a class="avatar-photo-link" href="https://www.linkedin.com/in/rhythm-bazari-13b845253/" target="_blank" rel="noopener" aria-label="Rhythm Bazari on LinkedIn">
+                <img class="avatar-photo" src="/assets/images/rhythmbazari.jpeg" alt="Rhythm Bazari">
+              </a>
+              <div>
+                <h3><a class="team-link" href="https://www.linkedin.com/in/rhythm-bazari-13b845253/" target="_blank" rel="noopener">Rhythm Bazari</a></h3>
+                <p>Founder &amp; President</p>
+              </div>
+            </article>
+            <article class="team-card" data-reveal>
+              <a class="avatar-photo-link" href="https://www.linkedin.com/in/emi-sasajima-299552340/" target="_blank" rel="noopener" aria-label="Emi Sasajima on LinkedIn">
+                <img class="avatar-photo" src="/assets/images/emisasajima.jpeg" alt="Emi Sasajima">
+              </a>
+              <div>
+                <h3><a class="team-link" href="https://www.linkedin.com/in/emi-sasajima-299552340/" target="_blank" rel="noopener">Emi Sasajima</a></h3>
+                <p>Podcast Host</p>
+              </div>
+            </article>
+            <article class="team-card" data-reveal>
+              <a class="avatar-photo-link" href="https://www.linkedin.com/in/noma-ohonba-28997a395/" target="_blank" rel="noopener" aria-label="Noma Ohonba on LinkedIn">
+                <img class="avatar-photo" src="/assets/images/nomaohonba.jpeg" alt="Noma Ohonba">
+              </a>
+              <div>
+                <h3><a class="team-link" href="https://www.linkedin.com/in/noma-ohonba-28997a395/" target="_blank" rel="noopener">Noma Ohonba</a></h3>
+                <p>Executive Director</p>
+              </div>
+            </article>
+            <article class="team-card" data-reveal>
+              <a class="avatar-photo-link" href="https://www.linkedin.com/k-zh0u" target="_blank" rel="noopener" aria-label="Kevin Zhou on LinkedIn">
+                <img class="avatar-photo" src="/assets/images/kevzhou.jpeg" alt="Kevin Zhou">
+              </a>
+              <div>
+                <h3><a class="team-link" href="https://www.linkedin.com/k-zh0u" target="_blank" rel="noopener">Kevin Zhou</a></h3>
+                <p>Executive Director</p>
+              </div>
+            </article>
+            <article class="team-card" data-reveal>
+              <a class="avatar-photo-link" href="https://www.linkedin.com/in/madison-moreno-b3747b312/" target="_blank" rel="noopener" aria-label="Madison Moreno on LinkedIn">
+                <img class="avatar-photo" src="/assets/images/madisonmoreno.jpeg" alt="Madison Moreno">
+              </a>
+              <div>
+                <h3><a class="team-link" href="https://www.linkedin.com/in/madison-moreno-b3747b312/" target="_blank" rel="noopener">Madison Moreno</a></h3>
+                <p>Executive Director</p>
+              </div>
+            </article>
+            <article class="team-card" data-reveal>
+              <a class="avatar-photo-link" href="https://www.linkedin.com/in/alexis-o-312069359/" target="_blank" rel="noopener" aria-label="Alexis Ornelas Salas on LinkedIn">
+                <img class="avatar-photo" src="/assets/images/alexisornelas.jpeg" alt="Alexis Ornelas Salas">
+              </a>
+              <div>
+                <h3><a class="team-link" href="https://www.linkedin.com/in/alexis-o-312069359/" target="_blank" rel="noopener">Alexis Ornelas Salas</a></h3>
+                <p>Marketing</p>
+              </div>
+            </article>
+            <article class="team-card" data-reveal>
+              <a class="avatar-photo-link" href="https://www.linkedin.com/in/shritha-repala-3ba30834b/" target="_blank" rel="noopener" aria-label="Shritha Repala on LinkedIn">
+                <img class="avatar-photo" src="/assets/images/shritharepala.jpeg" alt="Shritha Repala">
+              </a>
+              <div>
+                <h3><a class="team-link" href="https://www.linkedin.com/in/shritha-repala-3ba30834b/" target="_blank" rel="noopener">Shritha Repala</a></h3>
+                <p>Web Manager</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" aria-labelledby="footer-title">
+      <div class="section-inner">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="#top" aria-label="Minorities In Stem home">
+              <img class="brand-mark" src="/assets/images/logo.png" alt="" aria-hidden="true">
+              <span id="footer-title">Minorities In Stem</span>
+            </a>
+            <p>Rooted in diversity. Growing through STEM.</p>
+          </div>
+          <nav aria-label="Footer links">
+            <p class="footer-title">Links</p>
+            <ul class="footer-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#mission">Mission</a></li>
+              <li><a href="#community">Community</a></li>
+              <li><a href="#chapter">Start a Chapter</a></li>
+            </ul>
+          </nav>
+          <div>
+            <p class="footer-title">Social</p>
+            <ul class="social-list">
+              <li>
+                <a href="#" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2" /><circle cx="17.5" cy="6.5" r="1.3" fill="currentColor" /></svg>
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="LinkedIn">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4v11H4V9Zm2-5a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm6 5h4v1.7c.7-1.1 1.8-2 3.6-2 2.7 0 4.4 1.8 4.4 5.2V20h-4v-5.5c0-1.5-.6-2.4-1.9-2.4s-2.1.9-2.1 2.4V20h-4V9Z" fill="currentColor" /></svg>
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="Twitter">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h4.6l4.1 5.6L17.8 4H21l-6.8 7.5L22 20h-4.6l-4.6-6.2L7.2 20H4l7.3-8L4 4Zm3.1 2 11.3 12h1.2L8.3 6H7.1Z" fill="currentColor" /></svg>
+                  Twitter
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-title">Contact</p>
+            <ul class="footer-links">
+              <li><a href="mailto:hello@minoritiesinstem.org">hello@minoritiesinstem.org</a></li>
+              <li><a href="#chapter">Chapter Applications</a></li>
+              <li><a href="#team">Student Leadership</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Minorities in STEM · All rights reserved</p>
+          <p>Made with purpose.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module">
+      import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@11/dist/motion.js";
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const header = document.querySelector("[data-site-header]");
+      const menuToggle = document.querySelector("[data-menu-toggle]");
+      const mobilePanel = document.querySelector("[data-mobile-panel]");
+      const mobileBackdrop = document.querySelector("[data-mobile-backdrop]");
+
+      const setMenu = (open) => {
+        menuToggle?.setAttribute("aria-expanded", String(open));
+        menuToggle?.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        mobilePanel?.classList.toggle("is-open", open);
+        mobileBackdrop?.classList.toggle("is-open", open);
+        document.body.classList.toggle("is-locked", open);
+      };
+
+      const updateHeader = () => {
+        header?.classList.toggle("is-scrolled", window.scrollY > 80);
+      };
+
+      updateHeader();
+      window.addEventListener("scroll", updateHeader, { passive: true });
+
+      menuToggle?.addEventListener("click", () => {
+        const open = menuToggle.getAttribute("aria-expanded") !== "true";
+        setMenu(open);
+      });
+
+      mobileBackdrop?.addEventListener("click", () => setMenu(false));
+
+      document.querySelectorAll(".mobile-nav a").forEach((link) => {
+        link.addEventListener("click", () => setMenu(false));
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setMenu(false);
+      });
+
+      if (reduceMotion) {
+        document.querySelectorAll("[data-reveal]").forEach((element) => {
+          element.style.opacity = 1;
+          element.style.transform = "none";
+        });
+      } else {
+        const revealGroups = [
+          ".hero-copy",
+          ".mission-body",
+          ".pillars-layout",
+          ".stats-grid",
+          ".community-grid",
+          ".chapter-content",
+          ".team-grid",
+          ".section-heading"
+        ];
+
+        revealGroups.forEach((selector) => {
+          document.querySelectorAll(selector).forEach((group) => {
+            const children = [...group.querySelectorAll("[data-reveal]")];
+            if (!children.length) return;
+            inView(
+              group,
+              () => {
+                children.forEach((child, index) => {
+                  animate(
+                    child,
+                    { opacity: 1, y: 0 },
+                    {
+                      duration: 0.6,
+                      delay: index * 0.1,
+                      easing: [0.16, 1, 0.3, 1]
+                    }
+                  );
+                });
+              },
+              { margin: "0px 0px -12% 0px" }
+            );
+          });
+        });
+      }
+
+      const stats = document.querySelector("[data-hero-stats]");
+      let counted = false;
+      const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+
+      const runCounters = () => {
+        if (counted || reduceMotion) {
+          document.querySelectorAll("[data-count-to]").forEach((node) => {
+            node.textContent = `${node.dataset.countTo}${node.dataset.suffix || ""}`;
+          });
+          counted = true;
+          return;
+        }
+
+        counted = true;
+        const counters = [...document.querySelectorAll("[data-count-to]")];
+        const start = performance.now();
+        const duration = 1500;
+
+        const frame = (now) => {
+          const progress = Math.min((now - start) / duration, 1);
+          const eased = easeOut(progress);
+
+          counters.forEach((node) => {
+            const target = Number(node.dataset.countTo || 0);
+            const value = Math.round(target * eased);
+            node.textContent = `${value}${node.dataset.suffix || ""}`;
+          });
+
+          if (progress < 1) requestAnimationFrame(frame);
+        };
+
+        requestAnimationFrame(frame);
+      };
+
+      if (stats) {
+        if (reduceMotion) {
+          runCounters();
+        } else {
+          inView(stats, runCounters, { margin: "0px 0px -20% 0px" });
+        }
+      }
+
+      (function(){
+        const t = document.querySelector('[data-theme-toggle]');
+        const r = document.documentElement;
+        const storageKey = 'mistem-theme';
+        const readTheme = () => {
+          try {
+            const saved = localStorage.getItem(storageKey);
+            return saved === 'dark' || saved === 'light' ? saved : null;
+          } catch {
+            return null;
+          }
+        };
+        const writeTheme = (value) => {
+          try {
+            localStorage.setItem(storageKey, value);
+          } catch {
+            // Storage can be unavailable in private or restricted contexts.
+          }
+        };
+        let d = readTheme() || (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light');
+        r.setAttribute('data-theme', d);
+        
+        const moonSVG = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+        const sunSVG  = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`;
+        
+        const applyTheme = (value, persist = false) => {
+          d = value === 'dark' ? 'dark' : 'light';
+          r.setAttribute('data-theme', d);
+          if (persist) writeTheme(d);
+          if (t) {
+            t.innerHTML = d === 'dark' ? sunSVG : moonSVG;
+            t.setAttribute('aria-label', 'Switch to ' + (d==='dark'?'light':'dark') + ' mode');
+          }
+        };
+
+        if (t) {
+          t.innerHTML = d === 'dark' ? sunSVG : moonSVG;
+          t.setAttribute('aria-label', 'Switch to ' + (d==='dark'?'light':'dark') + ' mode');
+          t.addEventListener('click', () => {
+            applyTheme(d === 'dark' ? 'light' : 'dark', true);
+          });
+        }
+
+        window.addEventListener('storage', (event) => {
+          if (event.key === storageKey && (event.newValue === 'dark' || event.newValue === 'light')) {
+            applyTheme(event.newValue);
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

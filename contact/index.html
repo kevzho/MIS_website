@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact Us | Minorities in STEM</title>
+    <meta name="description" content="Contact Minorities in STEM for partnerships, chapter questions, and general inquiries.">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="site-header"></div>
+    <main id="main">
+      <section class="hero page-hero">
+        <div class="hero-content">
+          <p class="eyebrow">Contact Us</p>
+          <h1>Questions, partnerships, resources, or chapter support.</h1>
+          <p class="lead">Reach out and the Minorities in STEM team will point you toward the next useful step.</p>
+        </div>
+      </section>
+
+      <section class="section section-alt" aria-labelledby="contact-heading">
+        <div class="container contact-layout">
+          <aside class="contact-card">
+            <p class="eyebrow">General Contact</p>
+            <h2 id="contact-heading">Let's connect.</h2>
+            <p>Use the form for general inquiries, collaboration ideas, media requests, or chapter questions.</p>
+            <ul class="contact-methods">
+              <li>
+                <strong>Email</strong>
+                <span>hello@minoritiesinstem.org</span>
+              </li>
+              <li>
+                <strong>Office Hours</strong>
+                <span>Fridays, 3:00 PM to 5:00 PM ET</span>
+              </li>
+              <li>
+                <strong>Response Time</strong>
+                <span>Most messages receive a reply within three business days.</span>
+              </li>
+            </ul>
+          </aside>
+          <form class="contact-card form-grid" data-enhanced-form data-success="Thanks for reaching out. Your message has been received.">
+            <div class="form-row">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" autocomplete="name" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-email">Email</label>
+              <input id="contact-email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-subject">Subject</label>
+              <input id="contact-subject" name="subject" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-message">Message</label>
+              <textarea id="contact-message" name="message" required></textarea>
+            </div>
+            <button class="button" type="submit">Submit</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>
