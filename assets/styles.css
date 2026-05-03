@@ -204,6 +204,11 @@ a {
   text-align: center;
 }
 
+.compact-header {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+}
+
 .eyebrow {
   margin: 0;
   color: var(--color-primary);
@@ -727,6 +732,7 @@ p {
 .profile-card,
 .article-card,
 .media-card,
+.episode-card,
 .resource-card,
 .stat-card,
 .step-card,
@@ -741,6 +747,7 @@ p {
 .feature-card,
 .article-card,
 .media-card,
+.episode-card,
 .resource-card,
 .step-card,
 .contact-card,
@@ -755,7 +762,8 @@ p {
 .step-card,
 .contact-card,
 .stat-card,
-.media-card {
+.media-card,
+.episode-card {
   transition:
     transform var(--transition-interactive),
     box-shadow var(--transition-interactive);
@@ -767,7 +775,8 @@ p {
 .step-card:hover,
 .contact-card:hover,
 .stat-card:hover,
-.media-card:hover {
+.media-card:hover,
+.episode-card:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
 }
@@ -1247,6 +1256,45 @@ textarea {
   padding: var(--space-5);
 }
 
+.episode-grid {
+  align-items: start;
+}
+
+.episode-card {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-4);
+}
+
+.episode-card iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 12px;
+}
+
+.spotify-feature {
+  display: grid;
+  gap: var(--space-4);
+  justify-items: start;
+  margin-bottom: var(--space-6);
+}
+
+.spotify-frame {
+  width: min(100%, 624px);
+  overflow: hidden;
+  aspect-ratio: 624 / 351;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.spotify-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 .play-icon {
   display: grid;
   width: 64px;
@@ -1283,6 +1331,178 @@ textarea {
   display: grid;
   gap: var(--space-4);
   padding: var(--space-6);
+}
+
+.hackathon-graphic {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.72fr);
+  gap: clamp(var(--space-6), 5vw, var(--space-12));
+  min-height: 360px;
+  align-items: center;
+  padding: clamp(var(--space-6), 5vw, var(--space-12));
+  overflow: hidden;
+  color: var(--color-on-dark);
+  background:
+    linear-gradient(135deg, oklch(0.24 0.1 158), oklch(0.19 0.08 196) 52%, oklch(0.42 0.13 68)),
+    var(--color-primary-band);
+  border: 1px solid oklch(from var(--color-accent) l c h / 0.3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.hackathon-graphic::before {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(90deg, oklch(1 0 0 / 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, oklch(1 0 0 / 0.08) 1px, transparent 1px);
+  background-size: 56px 56px;
+  content: "";
+  opacity: 0.45;
+}
+
+.hackathon-copy,
+.hackathon-visual,
+.hackathon-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.hackathon-copy {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.hackathon-copy span,
+.hackathon-footer span {
+  color: var(--color-accent);
+  font-size: var(--text-sm);
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.hackathon-copy strong {
+  color: var(--color-on-dark);
+  font-family: var(--font-display);
+  font-size: var(--text-3xl);
+  line-height: 0.95;
+}
+
+.hackathon-copy em {
+  width: fit-content;
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-on-accent);
+  font-size: var(--text-xl);
+  font-style: normal;
+  font-weight: 900;
+  line-height: 1;
+  background: var(--color-accent);
+  border-radius: var(--radius-md);
+}
+
+.hackathon-visual {
+  min-height: 260px;
+  aspect-ratio: 1;
+}
+
+.chip-core,
+.orbit,
+.node {
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+
+.chip-core {
+  top: 50%;
+  left: 50%;
+  width: 116px;
+  height: 116px;
+  color: var(--color-on-accent);
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  background: var(--color-accent);
+  border: 8px solid oklch(1 0 0 / 0.22);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 44px oklch(0 0 0 / 0.24);
+  transform: translate(-50%, -50%);
+}
+
+.chip-core::before,
+.chip-core::after {
+  position: absolute;
+  background: repeating-linear-gradient(90deg, oklch(1 0 0 / 0.42) 0 8px, transparent 8px 18px);
+  content: "";
+}
+
+.chip-core::before {
+  right: calc(100% + 12px);
+  width: 92px;
+  height: 8px;
+}
+
+.chip-core::after {
+  left: calc(100% + 12px);
+  width: 92px;
+  height: 8px;
+}
+
+.orbit {
+  inset: 9%;
+  border: 2px solid oklch(from var(--color-accent) l c h / 0.46);
+  border-radius: var(--radius-full);
+}
+
+.orbit-one {
+  transform: rotate(22deg) scaleX(1.08);
+}
+
+.orbit-two {
+  inset: 22%;
+  border-color: oklch(1 0 0 / 0.3);
+  transform: rotate(-32deg) scaleX(1.22);
+}
+
+.node {
+  width: 24px;
+  height: 24px;
+  background: var(--color-on-dark);
+  border: 4px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+}
+
+.node-one {
+  top: 11%;
+  right: 22%;
+}
+
+.node-two {
+  bottom: 19%;
+  left: 18%;
+}
+
+.node-three {
+  right: 11%;
+  bottom: 22%;
+}
+
+.hackathon-footer {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.hackathon-footer span {
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-on-dark);
+  background: oklch(1 0 0 / 0.12);
+  border: 1px solid oklch(1 0 0 / 0.18);
+  border-radius: var(--radius-md);
 }
 
 .site-footer {
@@ -1585,6 +1805,17 @@ textarea {
 
   .media-card {
     grid-template-columns: 1fr;
+  }
+
+  .hackathon-graphic {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hackathon-visual {
+    width: min(100%, 320px);
+    min-height: 240px;
+    margin-inline: auto;
   }
 
   .bar-row {
