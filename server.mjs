@@ -88,8 +88,15 @@ async function resolveFile(pathname) {
   return null;
 }
 
+function shouldServeHackathonRoot(requestHost, pathname) {
+  if (pathname !== "/") return false;
+  const hostname = String(requestHost || "").split(":")[0].toLowerCase();
+  return hostname.startsWith("hackathon.") || hostname.startsWith("ai-x-stem-hackathon.");
+}
+
 createServer(async (request, response) => {
   const url = new URL(request.url || "/", `http://${request.headers.host || "localhost"}`);
+  const requestedPathname = shouldServeHackathonRoot(request.headers.host, url.pathname) ? "/hackathon" : url.pathname;
   const placeholderMatch = url.pathname.match(/^\/api\/placeholder\/(\d+)\/(\d+)$/);
 
   if (placeholderMatch) {
@@ -103,7 +110,7 @@ createServer(async (request, response) => {
   }
 
   try {
-    const filePath = await resolveFile(assetAliases[url.pathname] || url.pathname);
+    const filePath = await resolveFile(assetAliases[requestedPathname] || requestedPathname);
     if (!filePath) {
       response.writeHead(404, { "Content-Type": "text/plain; charset=utf-8" });
       response.end("Page not found");

@@ -56,6 +56,12 @@ Then open:
 http://127.0.0.1:4174
 ```
 
+## AI x STEM Hackathon Subdomain
+
+The MISHacks Episode 1 page is available at `/hackathon/`, with `/ai-x-stem-hackathon/` redirecting there.
+
+For a production subdomain such as `hackathon.minoritiesinstem.org`, point the subdomain at the same static host and configure the host to serve `/hackathon/index.html` for that subdomain root. The local preview server also maps hostnames beginning with `hackathon.` or `ai-x-stem-hackathon.` to the hackathon page when the request path is `/`.
+
 ## GitHub Pages
 
 This site can be hosted on GitHub Pages because it is static HTML, CSS, JavaScript, and image assets. GitHub Pages will not run `server.mjs`; that file is only for local preview.

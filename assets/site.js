@@ -11,6 +11,7 @@ const navigation = [
     label: "Get Involved",
     items: [
       { label: "Starting a Chapter", href: "/get-involved/start-chapter" },
+      { label: "Partners", href: "/#partners" },
       { label: "Contact Us", href: "/contact" }
     ]
   },
@@ -19,16 +20,19 @@ const navigation = [
     items: [{ label: "Community Inclusivity", href: "/initiatives/community-inclusivity" }]
   },
   {
+    label: "Events",
+    items: [
+      { label: "MISHacks Episode 1", href: "/hackathon" },
+      { label: "Event Calendar", href: "/events" }
+    ]
+  },
+  {
     label: "Resources",
     items: [
       { label: "Articles/Posts", href: "/resources/articles" },
       { label: "Podcasts/Interviews", href: "/resources/podcasts" },
       { label: "Resource Links", href: "/resources/links" }
     ]
-  },
-  {
-    label: "Impact",
-    items: [{ label: "2024-2025 Summary", href: "/impact" }]
   }
 ];
 
@@ -144,6 +148,8 @@ function renderFooter() {
           <ul class="footer-links">
             <li><a href="/">Home</a></li>
             <li><a href="/about">About Us</a></li>
+            <li><a href="/hackathon">MISHacks Episode 1</a></li>
+            <li><a href="/events">Event Calendar</a></li>
             <li><a href="/get-involved/start-chapter">Starting a Chapter</a></li>
           </ul>
         </nav>
@@ -331,6 +337,14 @@ function setupReveals() {
     ".hero-actions",
     ".section-header",
     ".feature-card",
+    ".partner-card",
+    ".event-card",
+    ".calendar-month",
+    ".timeline-card",
+    ".track-card",
+    ".prize-card",
+    ".prompt-card",
+    ".fact-card",
     ".profile-card",
     ".article-card",
     ".media-card",
