@@ -12,6 +12,7 @@ const navigation = [
     items: [
       { label: "Starting a Chapter", href: "/get-involved/start-chapter" },
       { label: "Partners", href: "/#partners" },
+      { label: "Community Board", href: "/community" },
       { label: "Contact Us", href: "/contact" }
     ]
   },
@@ -107,7 +108,7 @@ function renderHeader() {
               ${renderNavItems()}
             </ul>
             <div class="header-actions" aria-label="Account and donation links">
-              <a class="button outline" href="/login">Log In</a>
+              <a class="button outline" href="/login" data-auth-link>Log In</a>
               <a class="button donate" href="/donate">Donate</a>
             </div>
           </div>
@@ -137,10 +138,10 @@ function renderFooter() {
           </a>
           <p>Rooted in diversity. Growing through STEM.</p>
           <ul class="social-list" aria-label="Social media links">
-            <li><a class="social-link" href="#" aria-label="Slack">S</a></li>
-            <li><a class="social-link" href="#" aria-label="Instagram">Ig</a></li>
-            <li><a class="social-link" href="#" aria-label="X or Twitter">X</a></li>
-            <li><a class="social-link" href="#" aria-label="LinkedIn">in</a></li>
+            <li><a class="social-link" href="https://www.instagram.com/minoritiesin_stem/" target="_blank" rel="noopener" aria-label="Minorities in STEM on Instagram">Ig</a></li>
+            <li><a class="social-link" href="https://www.linkedin.com/company/minoritiesinstem/" target="_blank" rel="noopener" aria-label="Minorities in STEM on LinkedIn">in</a></li>
+            <li><a class="social-link" href="mailto:hello@minoritiesinstem.org" aria-label="Email Minorities in STEM">@</a></li>
+            <li><a class="social-link" href="/community" aria-label="Community board">B</a></li>
           </ul>
         </div>
         <nav aria-label="Footer navigation">
@@ -150,6 +151,7 @@ function renderFooter() {
             <li><a href="/about">About Us</a></li>
             <li><a href="/hackathon">MISHacks Episode 1</a></li>
             <li><a href="/events">Event Calendar</a></li>
+            <li><a href="/community">Community Board</a></li>
             <li><a href="/get-involved/start-chapter">Starting a Chapter</a></li>
           </ul>
         </nav>
@@ -345,6 +347,9 @@ function setupReveals() {
     ".prize-card",
     ".prompt-card",
     ".fact-card",
+    ".trusted-card",
+    ".community-feed",
+    ".community-post",
     ".profile-card",
     ".article-card",
     ".media-card",
@@ -412,10 +417,177 @@ function setupReveals() {
     .catch(fallbackReveal);
 }
 
+const authStorageKey = "mistem-user";
+const postStorageKey = "mistem-community-posts";
+
+function readJSON(key, fallback) {
+  try {
+    const value = localStorage.getItem(key);
+    return value ? JSON.parse(value) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function writeJSON(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+  } catch {
+    // Local storage can be unavailable in some browsing contexts.
+  }
+}
+
+function getCurrentUser() {
+  const user = readJSON(authStorageKey, null);
+  return user && user.email ? user : null;
+}
+
+function updateAuthUI() {
+  const user = getCurrentUser();
+  document.querySelectorAll("[data-auth-link]").forEach((link) => {
+    if (user) {
+      link.textContent = "Workspace";
+      link.setAttribute("href", "/community");
+      link.setAttribute("aria-label", `Open ${user.name || "your"} workspace`);
+    } else {
+      link.textContent = "Log In";
+      link.setAttribute("href", "/login");
+      link.setAttribute("aria-label", "Log in");
+    }
+  });
+}
+
+function setupLogin() {
+  const form = document.querySelector("[data-login-form]");
+  if (!form) return;
+
+  const note = form.querySelector(".form-note");
+  const user = getCurrentUser();
+  if (user) {
+    form.elements.name.value = user.name || "";
+    form.elements.email.value = user.email || "";
+    form.elements.affiliation.value = user.affiliation || "";
+    if (note) note.textContent = `Signed in as ${user.name || user.email}.`;
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const formData = new FormData(form);
+    const nextUser = {
+      name: String(formData.get("name") || "").trim(),
+      email: String(formData.get("email") || "").trim(),
+      affiliation: String(formData.get("affiliation") || "").trim(),
+      signedInAt: new Date().toISOString()
+    };
+    writeJSON(authStorageKey, nextUser);
+    updateAuthUI();
+    if (note) note.textContent = "Login saved. Opening your community board...";
+    window.setTimeout(() => {
+      window.location.href = "/community";
+    }, 500);
+  });
+}
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>'"]/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "'": "&#39;",
+    '"': "&quot;"
+  })[character]);
+}
+
+function formatDate(value) {
+  try {
+    return new Intl.DateTimeFormat(undefined, { month: "short", day: "numeric", year: "numeric" }).format(new Date(value));
+  } catch {
+    return "Recently";
+  }
+}
+
+function renderCommunityPosts(target) {
+  const posts = readJSON(postStorageKey, []);
+  const defaults = [
+    {
+      title: "Welcome to the MIS community board",
+      type: "Chapter Update",
+      body: "Share chapter wins, event recaps, project launches, questions, and opportunities here.",
+      author: "Minorities in STEM",
+      affiliation: "Core Team",
+      createdAt: new Date().toISOString()
+    }
+  ];
+  const visiblePosts = posts.length ? posts : defaults;
+  target.innerHTML = visiblePosts
+    .map((post) => `
+      <article class="community-post">
+        <div class="post-meta">
+          <span class="tag">${escapeHTML(post.type || "Update")}</span>
+          <time datetime="${escapeHTML(post.createdAt || "")}">${formatDate(post.createdAt)}</time>
+        </div>
+        <h3>${escapeHTML(post.title || "Untitled update")}</h3>
+        <p>${escapeHTML(post.body || "")}</p>
+        <p class="role">${escapeHTML(post.author || "Anonymous")}${post.affiliation ? ` · ${escapeHTML(post.affiliation)}` : ""}</p>
+      </article>
+    `)
+    .join("");
+}
+
+function setupCommunityBoard() {
+  const form = document.querySelector("[data-community-form]");
+  const postsTarget = document.querySelector("[data-community-posts]");
+  if (!form || !postsTarget) return;
+
+  renderCommunityPosts(postsTarget);
+  const note = form.querySelector(".form-note");
+  const user = getCurrentUser();
+  if (!user && note) {
+    note.innerHTML = 'Log in first to attach your name to a post. <a href="/login">Log in</a>';
+  }
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const activeUser = getCurrentUser();
+    if (!activeUser) {
+      if (note) note.innerHTML = 'Please <a href="/login">log in</a> before posting.';
+      return;
+    }
+
+    const formData = new FormData(form);
+    const posts = readJSON(postStorageKey, []);
+    posts.unshift({
+      title: String(formData.get("title") || "").trim(),
+      type: String(formData.get("type") || "Chapter Update"),
+      body: String(formData.get("body") || "").trim(),
+      author: activeUser.name || activeUser.email,
+      affiliation: activeUser.affiliation || "",
+      createdAt: new Date().toISOString()
+    });
+    writeJSON(postStorageKey, posts.slice(0, 20));
+    form.reset();
+    renderCommunityPosts(postsTarget);
+    if (note) note.textContent = "Update posted.";
+  });
+}
+
 renderHeader();
 renderFooter();
 setupFavicon();
 setupTheme();
 setupNavigation();
 setupForms();
+setupLogin();
+setupCommunityBoard();
+updateAuthUI();
 setupReveals();

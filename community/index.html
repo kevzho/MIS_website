@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Community Board | Minorities in STEM</title>
+    <meta name="description" content="Share Minorities in STEM chapter updates, project wins, and community opportunities.">
+    <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <div id="site-header"></div>
+    <main id="main">
+      <section class="hero page-hero">
+        <div class="hero-content">
+          <p class="eyebrow">Community</p>
+          <h1>Chapter updates, wins, and opportunities.</h1>
+          <p class="lead">Share what your chapter is building, celebrate student work, and keep local momentum visible.</p>
+          <div class="hero-actions">
+            <a class="button" href="#post-update">Post an Update</a>
+            <a class="button secondary" href="/login">Log In</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="post-update" aria-labelledby="post-update-heading">
+        <div class="container community-layout">
+          <form class="contact-card form-grid" data-community-form>
+            <p class="eyebrow">Share</p>
+            <h2 id="post-update-heading">Post a community update.</h2>
+            <div class="form-row">
+              <label for="post-title">Title</label>
+              <input id="post-title" name="title" required maxlength="90" placeholder="Robotics workshop recap">
+            </div>
+            <div class="form-row">
+              <label for="post-type">Type</label>
+              <select id="post-type" name="type" required>
+                <option value="Chapter Update">Chapter Update</option>
+                <option value="Opportunity">Opportunity</option>
+                <option value="Project Win">Project Win</option>
+                <option value="Question">Question</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="post-body">Post</label>
+              <textarea id="post-body" name="body" required maxlength="700" placeholder="What happened, who was involved, and what should people know?"></textarea>
+            </div>
+            <button class="button" type="submit">Publish Update</button>
+            <p class="form-note" role="status" aria-live="polite"></p>
+          </form>
+          <section class="community-feed" aria-labelledby="community-feed-heading">
+            <div class="section-header compact-header">
+              <p class="eyebrow">Feed</p>
+              <h2 id="community-feed-heading">Latest updates.</h2>
+            </div>
+            <div class="community-posts" data-community-posts></div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

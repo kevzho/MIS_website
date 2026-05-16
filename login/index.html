@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Log In | Minorities in STEM</title>
-    <meta name="description" content="Log in to the Minorities in STEM platform.">
+    <meta name="description" content="Log in to the Minorities in STEM community workspace.">
     <link rel="stylesheet" href="/assets/styles.css">
     <script src="/assets/site.js" defer></script>
   </head>
@@ -16,17 +16,21 @@
         <div class="container contact-layout">
           <div class="content-stack">
             <p class="eyebrow">Log In</p>
-            <h1 id="login-heading">Access your chapter workspace.</h1>
-            <p class="lead">This placeholder sign-in keeps the navigation complete while the member portal is being connected.</p>
+            <h1 id="login-heading">Access your community workspace.</h1>
+            <p class="lead">Sign in with your name and email to share updates, save your local profile, and open the community board.</p>
           </div>
-          <form class="contact-card form-grid" data-enhanced-form data-success="Demo login submitted.">
+          <form class="contact-card form-grid" data-login-form>
+            <div class="form-row">
+              <label for="login-name">Name</label>
+              <input id="login-name" name="name" autocomplete="name" required>
+            </div>
             <div class="form-row">
               <label for="login-email">Email</label>
               <input id="login-email" name="email" type="email" autocomplete="email" required>
             </div>
             <div class="form-row">
-              <label for="login-password">Password</label>
-              <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+              <label for="login-affiliation">School or Chapter</label>
+              <input id="login-affiliation" name="affiliation" autocomplete="organization" placeholder="Woodward Academy">
             </div>
             <button class="button" type="submit">Log In</button>
             <p class="form-note" role="status" aria-live="polite"></p>
